@@ -1,7 +1,7 @@
 # TypingGame
 Assignment 5 for CS4223 Game Programming Spring 2023 Modified Typing Game Tutorial from Brackeys
 
-## Modifications Made
+## Modifications 
 1. Three scenes (intro, game, exit) and moving between them including going back to intro
 2. On starting the game, load a text file with 1,000 random words into an array. Use the array for the falling words.
 3. Intro has input for user name
