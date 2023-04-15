@@ -15,7 +15,7 @@ public class Pause : MonoBehaviour
 
     void Start()
     {
-        totalWords.text = WordDisplay.wordTotal.ToString();
+        totalWords.text = WordManager.wordTotal.ToString();
     }
 
     // Update is called once per frame

@@ -11,12 +11,17 @@ public class WordManager : MonoBehaviour
 
 	private bool hasActiveWord;
 	private Word activeWord;
+
+	public static int wordTotal;
 	public static int charTotal;
-	//public static int wordTotal;
+	public static int correctChars;
+	//public static float percentage = correctChars / charTotal;
 
 	void Start()
     {
-		charTotal = 0;
+		wordTotal = 0;
+		charTotal = 1;
+		correctChars = 0;
 	}
 
 	public void AddWord()
@@ -25,7 +30,7 @@ public class WordManager : MonoBehaviour
 		Debug.Log(word.word);
 
 		words.Add(word);
-		//wordTotal += 1;
+		wordTotal++;
 	}
 
 	public void TypeLetter(char letter)
@@ -35,8 +40,13 @@ public class WordManager : MonoBehaviour
 			if (activeWord.GetNextLetter() == letter)
 			{
 				activeWord.TypeLetter();
+				correctChars++;
 				charTotal++;
 			}
+			else
+            {
+				charTotal++;
+            }
 		}
 		else
 		{
